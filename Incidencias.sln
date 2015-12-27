@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incidencias.Entities", "Incidencias.Entities\Incidencias.Entities.csproj", "{F4DB24F3-4F28-4F72-A26F-B3326476BF7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incidencias.Data", "Incidencias.Data\Incidencias.Data.csproj", "{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4DB24F3-4F28-4F72-A26F-B3326476BF7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DB24F3-4F28-4F72-A26F-B3326476BF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DB24F3-4F28-4F72-A26F-B3326476BF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DB24F3-4F28-4F72-A26F-B3326476BF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
