@@ -1,43 +1,66 @@
 ﻿<hr />
 <div class="row">
     <div class="col-md-8">
-        <div class="panel panel-primary" id="panelLatestMovies">
+        <div class="panel panel-primary" id="panelUltimasIncidencias">
             <div class="panel-heading">
-                <h3 class="panel-title">Latest Movies Released</h3>
+                <h3 class="panel-title">Últimas Incidencias</h3>
             </div>
 
             <div class="panel-body">
-                <div ng-if="loadingMovies">
+                <div ng-if="loadingIncidencias">
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4">
-                        <i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading movies...</label>
+                        <i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Cargando incidencias...</label>
                     </div>
                     <div class="col-xs-4"></div>
                 </div>
-                <div class="col-xs-12 col-sm-6 movie" ng-repeat="movie in latestMovies">
+                <div class="col-xs-12 col-sm-6 incidencia" ng-repeat="incidencia in latestInciencias">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <strong>{{movie.Title}} </strong>
+                            <strong>{{incidencia.Titulo}} </strong>
                         </div>
                         <div class="panel-body">
-                            <div class="media">
-                                <a class="pull-left" href="#">
-                                    <a class="fancybox pull-left" rel="gallery1" ng-href="../../Content/images/movies/{{movie.Image}}" title="{{movie.Description | limitTo:200}}">
-                                        <img class="media-object" height="120" ng-src="../../Content/images/movies/{{movie.Image}}" alt="" />
-                                    </a>
-
-                                </a>
-                                <div class="media-body">
-                                    <available-movie is-available="{{movie.IsAvailable}}"></available-movie>
-                                    <div><small>{{movie.Description | limitTo: 70}}...</small></div>
-                                    <label class="label label-info">{{movie.Genre}}</label><br />
-                                </div>
-                                <br />
+                            <div class="table-responsive">
+                                <table class="table table-condensed shortMargin">
+                                    <tr>
+                                        <td class="shortPadding">Descripción:</td>
+                                        <td class="shortPadding"><i>{{incidencia.Descripcion}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Aplicación:</td>
+                                        <td class="shortPadding"><i>{{incidencia.Aplicacion}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Comentario:</td>
+                                        <td class="shortPadding"><i>{{incidencia.Comentario}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Contacto:</td>
+                                        <td class="shortPadding"><i>{{incidencia.Contacto}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Fecha Alta:</td>
+                                        <td class="shortPadding"><i>{{customer.FechaAlta | date:'mediumDate'}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Estado:</td>
+                                        <td class="shortPadding"><i>{{incidencia.Estado}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Técnico:</td>
+                                        <td class="shortPadding"><i>{{incidencia.Tecnico}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Prioridad:</td>
+                                        <td class="shortPadding"><i>{{incidencia.Prioridad}}</i></td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <div class="panel-footer">
-                            <span component-rating="{{movie.Rating}}"></span>
-                            <a class="fancybox-media pull-right" ng-href="{{movie.TrailerURI}}">Trailer<i class="fa fa-video-camera fa-fw"></i></a>
+                        <div class="panel-footer clearfix">
+                            <div class="pull-right">
+                                <buton class="btn btn-primary btn-xs" ng-click="openEditDialog(incidencia);">Edit <i class="fa fa-pencil pull-right"></i></buton>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -45,22 +68,22 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="panel panel-success" id="panelMovieGenres">
+        <div class="panel panel-success" id="panelAplicaciones">
             <div class="panel-heading">
-                <h3 class="panel-title">Movies Genres</h3>
+                <h3 class="panel-title">Aplicaciones</h3>
             </div>
 
             <div class="panel-body">
-                <div ng-if="loadingGenres">
+                <div ng-if="loadingAplicaciones">
                     <div class="col-xs-4"></div>
-                    <div class="col-xs-4"><i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading Genres..</label></div>
+                    <div class="col-xs-4"><i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Cargando aplicaciones..</label></div>
                     <div class="col-xs-4"></div>
                 </div>
-                <div id="genres-bar"></div>
+                <div id="aplicaciones-bar"></div>
             </div>
             <div class="panel-footer">
-                <p class="text-center"><em>Wanna add a new Movie? Head over to the add movie form.</em></p>
-                <p class="text-center"><a ng-href="#/movies/add" class="btn btn-default">Add new Movie</a></p>
+                <p class="text-center"><em>Quieres añadir una incidencia?</em></p>
+                <p class="text-center"><a ng-href="#/incidencias/add" class="btn btn-default">Add incidencia</a></p>
             </div>
         </div>
     </div>

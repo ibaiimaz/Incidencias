@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('homeCinema', ['common.core', 'common.ui'])
+    angular.module('incidencias', ['common.core', 'common.ui'])
         .config(config)
         .run(run);
 
@@ -20,36 +20,36 @@
                 templateUrl: "scripts/spa/account/register.html",
                 controller: "registerCtrl"
             })
-            .when("/customers", {
-                templateUrl: "scripts/spa/customers/customers.html",
-                controller: "customersCtrl"
+            .when("/tecnicos", {
+                templateUrl: "scripts/spa/tecnicos/tecnicos.html",
+                controller: "tecnicosCtrl"
             })
-            .when("/customers/register", {
-                templateUrl: "scripts/spa/customers/register.html",
-                controller: "customersRegCtrl",
+            .when("/tecnicos/register", {
+                templateUrl: "scripts/spa/tecnicos/register.html",
+                controller: "tecnicosRegCtrl",
                 resolve: { isAuthenticated: isAuthenticated }
             })
-            .when("/movies", {
-                templateUrl: "scripts/spa/movies/movies.html",
-                controller: "moviesCtrl"
+            .when("/incidencias", {
+                templateUrl: "scripts/spa/incidencias/incidencias.html",
+                controller: "incidenciasCtrl"
             })
-            .when("/movies/add", {
-                templateUrl: "scripts/spa/movies/add.html",
-                controller: "movieAddCtrl",
+            .when("/incidencias/add", {
+                templateUrl: "scripts/spa/incidencias/add.html",
+                controller: "incidenciasAddCtrl",
                 resolve: { isAuthenticated: isAuthenticated }
             })
-            .when("/movies/:id", {
-                templateUrl: "scripts/spa/movies/details.html",
-                controller: "movieDetailsCtrl",
+            .when("/incidencias/:id", {
+                templateUrl: "scripts/spa/incidencias/details.html",
+                controller: "incidenciasDetailsCtrl",
                 resolve: { isAuthenticated: isAuthenticated }
             })
-            .when("/movies/edit/:id", {
-                templateUrl: "scripts/spa/movies/edit.html",
-                controller: "movieEditCtrl"
+            .when("/incidencias/edit/:id", {
+                templateUrl: "scripts/spa/incidencias/edit.html",
+                controller: "incidenciasEditCtrl"
             })
-            .when("/rental", {
-                templateUrl: "scripts/spa/rental/rental.html",
-                controller: "rentStatsCtrl"
+            .when("/aplicaciones", {
+                templateUrl: "scripts/spa/aplicaciones/aplicaciones.html",
+                controller: "aplicacionesCtrl"
             }).otherwise({ redirectTo: "/" });
     }
 
@@ -63,18 +63,18 @@
         }
 
         $(document).ready(function () {
-            $(".fancybox").fancybox({
-                openEffect: 'none',
-                closeEffect: 'none'
-            });
+            //$(".fancybox").fancybox({
+            //    openEffect: 'none',
+            //    closeEffect: 'none'
+            //});
 
-            $('.fancybox-media').fancybox({
-                openEffect: 'none',
-                closeEffect: 'none',
-                helpers: {
-                    media: {}
-                }
-            });
+            //$('.fancybox-media').fancybox({
+            //    openEffect: 'none',
+            //    closeEffect: 'none',
+            //    helpers: {
+            //        media: {}
+            //    }
+            //});
 
             $('[data-toggle=offcanvas]').click(function () {
                 $('.row-offcanvas').toggleClass('active');

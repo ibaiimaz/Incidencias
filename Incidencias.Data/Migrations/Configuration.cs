@@ -89,13 +89,14 @@ namespace Incidencias.Data.Migrations
             Incidencia[] incidencias = new Incidencia[] {
                     new Incidencia()
                     {
-                        AplicacionId = 1,
-                        Descripcion = "No se ha generado correctamente el pedido",
+                        AplicacionId = 7,
+                        Titulo = "Error generación pedido",
+                        Descripcion = "Al ir a crear un pedido a dado un error",
                         Contacto = "John Smith",
                         Estado = Estados.PdteGestionar,
                         FechaAlta = DateTime.Now,
                         Prioridad = Prioridades.Media,
-                        ResponsableId = 1,
+                        TecnicoId = 1,
                         FechaCierre = DateTime.Now
                     }
             };

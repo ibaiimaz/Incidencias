@@ -7,44 +7,40 @@
 
     function indexCtrl($scope, apiService, notificationService) {
         $scope.pageClass = 'page-home';
-        $scope.loadingMovies = true;
-        $scope.loadingGenres = true;
+        $scope.loadingIncidencias = true;
+        $scope.loadingAplicaciones = true;
         $scope.isReadOnly = true;
 
-        $scope.latestMovies = [];
+        $scope.latestIncidencias = [];
         $scope.loadData = loadData;
 
         function loadData() {
-            apiService.get('/api/movies/latest', null,
-                        moviesLoadCompleted,
-                        moviesLoadFailed);
+            apiService.get('/api/incidencias/latest', null,
+                        incidenciasLoadCompleted,
+                        incidenciasLoadFailed);
 
-            apiService.get("/api/genres/", null,
-                genresLoadCompleted,
-                genresLoadFailed);
+            apiService.get("/api/aplicaciones/", null,
+                aplicacionesLoadCompleted,
+                aplicacionesLoadFailed);
         }
 
-        function moviesLoadCompleted(result) {
-            $scope.latestMovies = result.data;
-            $scope.loadingMovies = false;
-        }
+        function incidenciasLoadCompleted(result) {
+            $scope.latestIncidencias = result.data;
+            $scope.loadingIncidencias = false;
+        }        
 
-        function genresLoadFailed(response) {
+        function incidenciasLoadFailed(response) {
             notificationService.displayError(response.data);
         }
 
-        function moviesLoadFailed(response) {
-            notificationService.displayError(response.data);
-        }
-
-        function genresLoadCompleted(result) {
-            var genres = result.data;
+        function aplicacionesLoadCompleted(result) {
+            var aplicaciones = result.data;
             Morris.Bar({
-                element: "genres-bar",
-                data: genres,
+                element: "aplicaciones-bar",
+                data: aplicaciones,
                 xkey: "Name",
-                ykeys: ["NumberOfMovies"],
-                labels: ["Number Of Movies"],
+                ykeys: ["NumberOfIncidencias"],
+                labels: ["Numero de incidencias"],
                 barRatio: 0.4,
                 xLabelAngle: 55,
                 hideHover: "auto",
@@ -55,10 +51,14 @@
             //    $scope.$apply();
             //});
 
-            $scope.loadingGenres = false;
+            $scope.loadingAplicaciones = false;
+        }
+
+        function aplicacionesLoadFailed(response) {
+            notificationService.displayError(response.data);
         }
 
         loadData();
     }
 
-})(angular.module('homeCinema'));
+})(angular.module('incidencias'));

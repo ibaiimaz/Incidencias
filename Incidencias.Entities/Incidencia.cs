@@ -5,6 +5,7 @@ namespace Incidencias.Entities
     public class Incidencia : IEntityBase
     {
         public int ID { get; set; }
+        public string Titulo { get; set; }
         public string Descripcion { get; set; }
         public int AplicacionId { get; set; }
         public virtual Aplicacion Aplicacion { get; set; }
@@ -13,8 +14,8 @@ namespace Incidencias.Entities
         public DateTime FechaAlta { get; set; }
         public Estados Estado { get; set; }
         public DateTime FechaCierre { get; set; }
-        public int ResponsableId { get; set; }
-        public virtual Tecnico Responsable { get; set; }
+        public int TecnicoId { get; set; }
+        public virtual Tecnico Tecnico { get; set; }
         public Prioridades Prioridad { get; set; }
     }
 

@@ -18,12 +18,11 @@ namespace Incidencias.Web
         {
             var config = GlobalConfiguration.Configuration;
 
-            // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             WebApiConfig.Register(config);
-            Bootstrapper.Run();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            Bootstrapper.Run();            
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
