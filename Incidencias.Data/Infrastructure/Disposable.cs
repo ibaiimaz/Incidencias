@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeCinema.Data.Infrastructure
+namespace Incidencias.Data.Infrastructure
 {
     public class Disposable : IDisposable
     {

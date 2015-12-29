@@ -27,7 +27,7 @@ namespace Incidencias.Data.Migrations
             // create roles
             context.RoleSet.AddOrUpdate(r => r.Name, GenerateRoles());
 
-            // username: chsakell, password: homecinema
+            // username: chsakell, password: Incidencias
             context.UserSet.AddOrUpdate(u => u.Email, new User[]{
                 new User()
                 {

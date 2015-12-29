@@ -1,0 +1,12 @@
+{
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "angucomplete-alt": "~2.1.0",
+    "tg-angular-validator": "~1.2.8",
+    "angular-base64": "~2.0.5",
+    "bootstrap": "~3.3.6",
+    "angular-loading-bar": "~0.8.0",
+    "angular-bootstrap": "~0.14.3"
+  }
+}

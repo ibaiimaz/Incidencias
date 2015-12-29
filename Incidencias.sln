@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incidencias.Entities", "Inc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incidencias.Data", "Incidencias.Data\Incidencias.Data.csproj", "{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incidencias.Services", "Incidencias.Services\Incidencias.Services.csproj", "{E3A79211-DB14-4E95-98EC-5F9445A88BC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incidencias.Web", "Incidencias.Web\Incidencias.Web.csproj", "{5A917A73-CBF9-4135-952B-04DC8D619DC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15721235-C0EF-4D48-AD12-B5AA3BA0F1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A79211-DB14-4E95-98EC-5F9445A88BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A79211-DB14-4E95-98EC-5F9445A88BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A79211-DB14-4E95-98EC-5F9445A88BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A79211-DB14-4E95-98EC-5F9445A88BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A917A73-CBF9-4135-952B-04DC8D619DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A917A73-CBF9-4135-952B-04DC8D619DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A917A73-CBF9-4135-952B-04DC8D619DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A917A73-CBF9-4135-952B-04DC8D619DC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

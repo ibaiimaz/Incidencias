@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\UserExtensions.cs" />
     <Compile Include="IncidenciasContext.cs" />
     <Compile Include="Configurations\AplicacionConfiguration.cs" />
     <Compile Include="Configurations\EntityBaseConfiguration.cs" />
