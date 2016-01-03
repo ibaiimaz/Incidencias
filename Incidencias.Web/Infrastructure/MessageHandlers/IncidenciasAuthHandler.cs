@@ -6,7 +6,6 @@ using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
-//using Incidencias.Web.Infrastructure.Extensions;
 using System.Text;
 using System.Net;
 using Incidencias.Web.Infrastructure.Extensions;

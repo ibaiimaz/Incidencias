@@ -22,7 +22,7 @@ namespace Incidencias.Web
             WebApiConfig.Register(config);
             Bootstrapper.Run();            
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configuration.EnsureInitialized();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }

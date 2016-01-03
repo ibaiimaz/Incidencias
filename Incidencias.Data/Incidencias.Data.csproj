@@ -71,6 +71,10 @@
     <Compile Include="Migrations\201512291841291_add_titulo_incidencia_migration.Designer.cs">
       <DependentUpon>201512291841291_add_titulo_incidencia_migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601021027476_add_Tecnico_Contacto_Aplicacio_migration.cs" />
+    <Compile Include="Migrations\201601021027476_add_Tecnico_Contacto_Aplicacio_migration.Designer.cs">
+      <DependentUpon>201601021027476_add_Tecnico_Contacto_Aplicacio_migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EntityBaseRepository.cs" />
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512291841291_add_titulo_incidencia_migration.resx">
       <DependentUpon>201512291841291_add_titulo_incidencia_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601021027476_add_Tecnico_Contacto_Aplicacio_migration.resx">
+      <DependentUpon>201601021027476_add_Tecnico_Contacto_Aplicacio_migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

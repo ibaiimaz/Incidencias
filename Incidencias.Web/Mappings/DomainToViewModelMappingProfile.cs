@@ -29,7 +29,9 @@ namespace Incidencias.Web.Mappings
                 .ForMember(vm => vm.Prioridad, map => map.MapFrom(m => m.Prioridad.ToString()));
 
             Mapper.CreateMap<Aplicacion, AplicacionViewModel>()
-                .ForMember(vm => vm.NumeroIncidencias, map => map.MapFrom(g => g.Incidencias.Count()));
+                .ForMember(vm => vm.NumeroIncidencias, map => map.MapFrom(g => g.Incidencias.Count()))
+                .ForMember(vm => vm.Tecnico, map => map.MapFrom(m => m.Tecnico.Nombre))
+                .ForMember(vm => vm.TecnicoId, map => map.MapFrom(m => m.Tecnico.ID));
 
             Mapper.CreateMap<Tecnico, TecnicoViewModel>()
                 .ForMember(vm => vm.NumeroIncidencias, map => map.MapFrom(g => g.Incidencias.Count()));

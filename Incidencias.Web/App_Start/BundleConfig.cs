@@ -30,8 +30,8 @@ namespace Incidencias.Web.App_Start
                 "~/Scripts/Vendors/underscore.js",
                 "~/Scripts/Vendors/raphael.js",
                 "~/Scripts/Vendors/morris.js",
-                "~/Scripts/Vendors/jquery.fancybox.js",
-                "~/Scripts/Vendors/jquery.fancybox-media.js",
+                //"~/Scripts/Vendors/jquery.fancybox.js",
+                //"~/Scripts/Vendors/jquery.fancybox-media.js",
                 "~/Scripts/Vendors/loading-bar.js"
                 ));
 
@@ -42,26 +42,26 @@ namespace Incidencias.Web.App_Start
                 "~/Scripts/spa/services/apiService.js",
                 "~/Scripts/spa/services/notificationService.js",
                 "~/Scripts/spa/services/membershipService.js",
-                "~/Scripts/spa/services/fileUploadService.js",
+                //"~/Scripts/spa/services/fileUploadService.js",
                 "~/Scripts/spa/layout/topBar.directive.js",
                 "~/Scripts/spa/layout/sideBar.directive.js",
                 "~/Scripts/spa/layout/customPager.directive.js",
                 "~/Scripts/spa/directives/rating.directive.js",
-                "~/Scripts/spa/directives/availableMovie.directive.js",
+                //"~/Scripts/spa/directives/availableMovie.directive.js",
                 "~/Scripts/spa/account/loginCtrl.js",
                 "~/Scripts/spa/account/registerCtrl.js",
                 "~/Scripts/spa/home/rootCtrl.js",
                 "~/Scripts/spa/home/indexCtrl.js",
-                "~/Scripts/spa/customers/customersCtrl.js",
-                "~/Scripts/spa/customers/customersRegCtrl.js",
-                "~/Scripts/spa/customers/customerEditCtrl.js",
-                "~/Scripts/spa/movies/moviesCtrl.js",
-                "~/Scripts/spa/movies/movieAddCtrl.js",
-                "~/Scripts/spa/movies/movieDetailsCtrl.js",
-                "~/Scripts/spa/movies/movieEditCtrl.js",
-                "~/Scripts/spa/controllers/rentalCtrl.js",
-                "~/Scripts/spa/rental/rentMovieCtrl.js",
-                "~/Scripts/spa/rental/rentStatsCtrl.js"
+                "~/Scripts/spa/aplicaciones/aplicacionesCtrl.js",
+                "~/Scripts/spa/aplicaciones/aplicacionesRegCtrl.js",
+                "~/Scripts/spa/aplicaciones/aplicacionEditCtrl.js"
+                //"~/Scripts/spa/movies/moviesCtrl.js",
+                //"~/Scripts/spa/movies/movieAddCtrl.js",
+                //"~/Scripts/spa/movies/movieDetailsCtrl.js",
+                //"~/Scripts/spa/movies/movieEditCtrl.js",
+                //"~/Scripts/spa/controllers/rentalCtrl.js",
+                //"~/Scripts/spa/rental/rentMovieCtrl.js",
+                //"~/Scripts/spa/rental/rentStatsCtrl.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -71,7 +71,7 @@ namespace Incidencias.Web.App_Start
                  "~/content/css/font-awesome.css",
                 "~/content/css/morris.css",
                 "~/content/css/toastr.css",
-                "~/content/css/jquery.fancybox.css",
+                //"~/content/css/jquery.fancybox.css",
                 "~/content/css/loading-bar.css"));
 
             BundleTable.EnableOptimizations = false;

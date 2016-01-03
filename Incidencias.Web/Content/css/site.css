@@ -25,6 +25,11 @@ body {
     background-color: whitesmoke;
 }
 
+.panel-title {
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
 .movie {
 }
 
@@ -106,7 +111,7 @@ ul.pagination > li
 
 
 .shortInputSearch {
-    width: 300px !important;
+    width: 250px !important;
     float: right !important;
 }
 

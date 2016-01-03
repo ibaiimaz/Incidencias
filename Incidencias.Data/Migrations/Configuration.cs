@@ -15,12 +15,12 @@ namespace Incidencias.Data.Migrations
 
         protected override void Seed(IncidenciasContext context)
         {
-            //  create Aplicaciones
-            context.AplicacionSet.AddOrUpdate(g => g.Nombre, GenerarAplicaciones());
-
             // create Tecnicos
             context.TecnicoSet.AddOrUpdate(m => m.Iniciales, GenerarTecnicos());
 
+            //  create Aplicaciones
+            context.AplicacionSet.AddOrUpdate(g => g.Nombre, GenerarAplicaciones());
+           
             //// create Incidencias
             context.IncidenciaSet.AddOrUpdate(GenerarIncidencias());
 
@@ -48,17 +48,7 @@ namespace Incidencias.Data.Migrations
                 }
             });
         }
-
-        private Aplicacion[] GenerarAplicaciones()
-        {
-            Aplicacion[] genres = new Aplicacion[] {
-                new Aplicacion() { ID = 1, Nombre = "Compras" },
-                new Aplicacion() { ID = 2, Nombre = "Ventas" },
-                new Aplicacion() { ID = 3, Nombre = "RRHH" }
-            };
-
-            return genres;
-        }
+                
         private Tecnico[] GenerarTecnicos()
         {
             Tecnico[] movies = new Tecnico[] {
@@ -84,6 +74,18 @@ namespace Incidencias.Data.Migrations
 
             return movies;
         }
+
+        private Aplicacion[] GenerarAplicaciones()
+        {
+            Aplicacion[] genres = new Aplicacion[] {
+                new Aplicacion() { ID = 1, Nombre = "Compras", TecnicoId = 3, Contacto = "Contacto 1" },
+                new Aplicacion() { ID = 2, Nombre = "Ventas", TecnicoId = 3, Contacto = "Contacto 2" },
+                new Aplicacion() { ID = 3, Nombre = "RRHH", TecnicoId = 3, Contacto = "Contacto 3" }
+            };
+
+            return genres;
+        }
+
         private Incidencia[] GenerarIncidencias()
         {
             Incidencia[] incidencias = new Incidencia[] {

@@ -50,7 +50,13 @@
             .when("/aplicaciones", {
                 templateUrl: "scripts/spa/aplicaciones/aplicaciones.html",
                 controller: "aplicacionesCtrl"
-            }).otherwise({ redirectTo: "/" });
+            })
+            .when("/aplicaciones/register", {
+                templateUrl: "scripts/spa/aplicaciones/register.html",
+                controller: "aplicacionesRegCtrl",
+                resolve: { isAuthenticated: isAuthenticated }
+            })
+            .otherwise({ redirectTo: "/" });
     }
 
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
@@ -63,18 +69,18 @@
         }
 
         $(document).ready(function () {
-            //$(".fancybox").fancybox({
-            //    openEffect: 'none',
-            //    closeEffect: 'none'
-            //});
+        //    $(".fancybox").fancybox({
+        //        openEffect: 'none',
+        //        closeEffect: 'none'
+        //    });
 
-            //$('.fancybox-media').fancybox({
-            //    openEffect: 'none',
-            //    closeEffect: 'none',
-            //    helpers: {
-            //        media: {}
-            //    }
-            //});
+        //    $('.fancybox-media').fancybox({
+        //        openEffect: 'none',
+        //        closeEffect: 'none',
+        //        helpers: {
+        //            media: {}
+        //        }
+        //    });
 
             $('[data-toggle=offcanvas]').click(function () {
                 $('.row-offcanvas').toggleClass('active');

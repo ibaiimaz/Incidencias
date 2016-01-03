@@ -1,22 +1,15 @@
 ﻿(function (app) {
     'use strict';
 
-    app.controller('customersRegCtrl', customersRegCtrl);
+    app.controller('aplicacionesRegCtrl', aplicacionesRegCtrl);
 
-    customersRegCtrl.$inject = ['$scope', '$location', '$rootScope', 'apiService'];
+    aplicacionesRegCtrl.$inject = ['$scope', '$location', '$rootScope', 'apiService'];
 
-    function customersRegCtrl($scope, $location, $rootScope, apiService) {
+    function aplicacionesRegCtrl($scope, $location, $rootScope, apiService) {
 
-        $scope.newCustomer = {};
+        $scope.newAplicacion = {};
 
         $scope.Register = Register;
-
-        $scope.openDatePicker = openDatePicker;
-        $scope.dateOptions = {
-            formatYear: 'yy',
-            startingDay: 1
-        };
-        $scope.datepicker = {};
 
         $scope.submission = {
             successMessages: ['Successfull submission will appear here.'],
@@ -24,7 +17,7 @@
         };
 
         function Register() {
-            apiService.post('/api/customers/register', $scope.newCustomer,
+            apiService.post('/api/aplicaciones/register', $scope.newCustomer,
            registerCustomerSucceded,
            registerCustomerFailed);
         }
@@ -55,4 +48,4 @@
         };
     }
 
-})(angular.module('homeCinema'));
+})(angular.module('incidencias'));

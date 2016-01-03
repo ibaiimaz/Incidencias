@@ -15,6 +15,9 @@ namespace Incidencias.Entities
 
         public int ID { get; set; }
         public string Nombre { get; set; }
+        public int TecnicoId { get; set; }
+        public virtual Tecnico Tecnico { get; set; }
+        public string Contacto { get; set; }
         public virtual ICollection<Incidencia> Incidencias { get; set; }
 
     }

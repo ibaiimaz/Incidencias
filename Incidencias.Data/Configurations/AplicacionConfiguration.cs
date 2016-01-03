@@ -12,6 +12,8 @@ namespace Incidencias.Data.Configurations
         public AplicacionConfiguration()
         {
             Property(g => g.Nombre).IsRequired().HasMaxLength(50);
+            Property(m => m.TecnicoId).IsRequired();
+            Property(m => m.Contacto).IsRequired().HasMaxLength(100);
         }
     }
 }
